@@ -24,7 +24,7 @@ const downloadInstagramReel = async (url: string, ctx: Context) => {
     try {
         const response = await axios.request(options);
         await ctx.replyWithVideo(response.data.media, {
-            caption: `Downloaded via @insta_copy_robot`,
+            caption: `Video @videosaves_robot orqali yuklab olindi`,
         });
     } catch (error) {
         console.error(error);
@@ -36,7 +36,7 @@ const messageController = async (ctx: Context) => {
     const message = ctx.message?.text as string;
     const isvalidUrl = checkValidUrl(message);
     if (isvalidUrl) {
-        await ctx.reply('We are processing your request, please wait...');
+        await ctx.reply('Videoni yuklayabman, iltimos kuting...');
         await ctx.replyWithChatAction('upload_video');
         await downloadInstagramReel(message, ctx);
     }
