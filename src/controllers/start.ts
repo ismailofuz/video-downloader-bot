@@ -13,7 +13,7 @@ const startController = async (ctx: Context) => {
         .onConflict('chat_id')
         .merge();
 
-    await ctx.reply('<b>Welcome</b> to the bot', { parse_mode: 'HTML' });
+    await ctx.reply('Botga xush kelibsiz', { parse_mode: 'HTML' });
 };
 
 export { startController };
