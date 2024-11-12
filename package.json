@@ -1,5 +1,4 @@
 {
-    "type": "module",
     "devDependencies": {
         "@types/knex": "^0.16.1",
         "@types/node": "^22.5.5",
